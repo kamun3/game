@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لعبة سيرفرات المشاهير</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 لعبة سيرفرات المشاهير</h1>
+
+    <div id="nameSection">
+      <input type="text" id="playerName" placeholder="ادخل اسمك" />
+      <button onclick="enterGame()">دخول</button>
+    </div>
+
+    <div id="mainMenu" style="display:none;">
+      <h2>اختر نوع اللعبة</h2>
+      <div class="game-modes">
+        <button onclick="selectGameMode('مشاهير اليوتيوب')">🎬 مشاهير اليوتيوب</button>
+        <button disabled>⚽ كرة القدم (جاري الصيانة)</button>
+        <button disabled>🎤 مغنيين (جاري الصيانة)</button>
+        <button disabled>🎭 ممثلين (جاري الصيانة)</button>
+        <button disabled>🎮 قيمرز (جاري الصيانة)</button>
+      </div>
+
+      <div class="actions">
+        <button onclick="showCreate()">➕ إنشاء سيرفر</button>
+        <input type="text" id="searchName" placeholder="ابحث عن اسم السيرفر" oninput="updateServerList()" />
+        <div id="serverList"></div>
+      </div>
+    </div>
+
+    <div id="createSection" style="display:none;">
+      <h2>إنشاء سيرفر</h2>
+      <input type="text" id="serverName" placeholder="اسم السيرفر" />
+      <input type="password" id="serverPass" placeholder="كلمة المرور (اختياري)" />
+      <button onclick="createServer()">إنشاء</button>
+    </div>
+
+    <div id="joinSection" style="display:none;">
+      <h2>دخول سيرفر</h2>
+      <input type="password" id="joinPass" placeholder="كلمة المرور" />
+      <button onclick="confirmJoin()">دخول</button>
+    </div>
+
+    <div id="waitingScreen" style="display:none;">
+      <h2>⏳ جاري الانتظار...</h2>
+      <p>انتظر دخول لاعب آخر لبدء اللعبة.</p>
+    </div>
+
+    <div id="gameArea" style="display:none;">
+      <h2>📸 صور المشاهير</h2>
+      <p id="turnInfo"></p>
+      <div id="imageContainer"></div>
+      <div id="selectedImage"></div>
+      <div id="controls"></div>
+    </div>
+
+    <div id="result"></div>
+
+    <footer>🛠 الإصدار: 1.07v</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

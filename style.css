@@ -1,0 +1,162 @@
+/* عام */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0 20px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #2c2c2c;
+  color: #eee;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #888;
+}
+
+button {
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover:not(:disabled) {
+  background-color: #ff1a1a;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.game-modes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.game-modes button {
+  flex: 1 1 45%;
+  max-width: 45%;
+  min-width: 130px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+#serverList {
+  margin-top: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #222;
+  padding: 10px;
+}
+
+.server-item {
+  background: #333;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.server-item:hover {
+  background: #444;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+
+/* أقسام مخفية بشكل افتراضي */
+#nameSection,
+#createSection,
+#joinSection,
+#waitingScreen,
+#gameArea,
+#mainMenu {
+  /* لا تغيير */
+}
+
+/* حاوية الصور في اللعبة */
+#imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#imageContainer img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#imageContainer img:hover {
+  transform: scale(1.1);
+}
+
+#selectedImage {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#controls {
+  text-align: center;
+}
+
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
